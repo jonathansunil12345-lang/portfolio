@@ -455,47 +455,96 @@ body {
     letter-spacing: 0.3px;
 }
 
-/* Achievements Section */
-.achievements-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+/* Publications Section */
+.publications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
-.achievement-card {
+.publication-card {
     background: var(--bg-white);
-    padding: 28px 20px;
+    padding: 28px 32px;
     border: 1px solid var(--border-color);
-    text-align: center;
-    transition: var(--transition);
+    border-left: 3px solid var(--primary-color);
+    position: relative;
 }
 
-.achievement-card:hover {
+.publication-card:hover {
     border-color: var(--primary-color);
 }
 
-.achievement-icon {
-    width: 48px;
-    height: 48px;
-    background: var(--bg-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-    color: var(--primary-color);
-}
-
-.achievement-card h3 {
-    font-size: 0.9rem;
-    color: var(--primary-color);
-    margin-bottom: 10px;
+.pub-status {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 0.7rem;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 12px;
 }
 
-.achievement-card p {
-    font-size: 0.8rem;
+.pub-status.published {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.pub-status.accepted {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.publication-card h3 {
+    font-size: 1.05rem;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+    font-weight: 600;
+    padding-right: 80px;
+    line-height: 1.5;
+}
+
+.pub-venue {
+    font-size: 0.85rem;
     color: var(--text-secondary);
+    margin-bottom: 12px;
     line-height: 1.6;
+}
+
+.pub-description {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.pub-link {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+}
+
+.pub-link:hover {
+    color: var(--accent-highlight);
+}
+
+/* Project type as link */
+a.project-type {
+    text-decoration: none;
+    color: var(--primary-color);
+    background: var(--bg-light);
+    padding: 4px 10px;
+    transition: var(--transition);
+}
+
+a.project-type:hover {
+    background: var(--primary-color);
+    color: var(--bg-white);
 }
 
 /* Education Section */
