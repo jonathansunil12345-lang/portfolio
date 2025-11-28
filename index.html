@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+<body class="light-mode">
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="theme-icon">🌙</span>
+    </button>
 
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#home" class="nav-logo">JS</a>
+            <a href="#home" class="nav-logo">👨‍💻 JS</a>
             <ul class="nav-menu">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -21,7 +23,6 @@
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <a href="Jonathan_Resume.pdf" class="nav-resume" download>Resume</a>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -30,137 +31,106 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Compact -->
     <section id="home" class="hero">
-        <div class="hero-bg-gradient"></div>
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-badge">
                     <span class="pulse"></span>
-                    Available for Opportunities
+                    🚀 Available for Opportunities
                 </div>
                 <h1 class="hero-title">
-                    <span class="title-line">Embedded Systems</span>
-                    <span class="title-line gradient-text">Engineer & Researcher</span>
+                    Hi, I'm <span class="gradient-text">Jonathan</span> 👋
                 </h1>
+                <h2 class="hero-subtitle">Embedded Systems Engineer & Researcher</h2>
                 <p class="hero-description">
-                    Crafting intelligent embedded solutions with cutting-edge IoT technology and innovative hardware-software integration.
+                    Crafting intelligent embedded solutions with cutting-edge IoT technology 🔧
                 </p>
                 <div class="tech-stack">
-                    <span class="tech-label">My Tech Stack:</span>
                     <div class="tech-tags">
-                        <span class="tech-tag">C/C++</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">ARM Cortex</span>
-                        <span class="tech-tag">STM32</span>
-                        <span class="tech-tag">ESP32</span>
-                        <span class="tech-tag">RTOS</span>
-                        <span class="tech-tag">CAN Bus</span>
-                        <span class="tech-tag">IoT</span>
+                        <span class="tech-tag">⚡ C/C++</span>
+                        <span class="tech-tag">🐍 Python</span>
+                        <span class="tech-tag">🔌 ARM Cortex</span>
+                        <span class="tech-tag">📟 STM32</span>
+                        <span class="tech-tag">📡 ESP32</span>
+                        <span class="tech-tag">🚗 CAN Bus</span>
                     </div>
                 </div>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">
-                        <span>View My Work</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        View My Work ✨
                     </a>
-                    <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+                    <a href="#contact" class="btn btn-secondary">Let's Connect 💬</a>
                 </div>
             </div>
             <div class="hero-image">
                 <div class="image-wrapper">
-                    <div class="image-glow"></div>
                     <img src="photo.jpg" alt="Jonathan" onerror="this.src='https://ui-avatars.com/api/?name=Jonathan&size=400&background=6366f1&color=fff&bold=true'">
-                    <div class="image-border"></div>
                 </div>
-                <div class="floating-cards">
-                    <div class="float-card card-1">
-                        <span class="card-icon">🔧</span>
-                        <span>Embedded Systems</span>
+                <a href="Jonathan_Resume.pdf" class="resume-btn" download>
+                    📄 Download Resume
+                </a>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-num">6+</span>
+                        <span class="stat-text">Projects</span>
                     </div>
-                    <div class="float-card card-2">
-                        <span class="card-icon">🎯</span>
-                        <span>IoT Solutions</span>
-                    </div>
-                    <div class="float-card card-3">
-                        <span class="card-icon">🚀</span>
-                        <span>Research</span>
+                    <div class="stat">
+                        <span class="stat-num">2</span>
+                        <span class="stat-text">Papers</span>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <span>Scroll to explore</span>
-            <div class="scroll-line"></div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">About Me</span>
-                <h2 class="section-title">
-                    I am an <span class="gradient-text">Embedded Systems Engineer</span> and M.Tech scholar at VIT University
-                </h2>
-            </div>
+            <h2 class="section-title">🎯 About Me</h2>
             <div class="about-content">
-                <div class="about-text">
-                    <p>With expertise in <strong>automotive security systems</strong>, <strong>IoT wearables</strong>, and <strong>real-time embedded applications</strong>, I bridge the gap between hardware innovation and software intelligence.</p>
-                    <p>From developing CAN bus security mechanisms to creating IoT-based mental health monitoring systems, I'm driven by a passion for building efficient, impactful embedded solutions.</p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <span class="stat-number">6+</span>
-                        <span class="stat-label">Projects</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">2</span>
-                        <span class="stat-label">Publications</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">M.Tech</span>
-                        <span class="stat-label">VIT University</span>
-                    </div>
+                <p>I'm an <strong>Embedded Systems Engineer</strong> pursuing M.Tech at <strong>VIT University</strong>. With expertise in 🚗 <strong>automotive security</strong>, ⌚ <strong>IoT wearables</strong>, and 🔧 <strong>real-time embedded applications</strong>, I bridge hardware innovation with software intelligence.</p>
+                <div class="about-highlights">
+                    <div class="highlight">🎓 M.Tech @ VIT Vellore</div>
+                    <div class="highlight">🔬 2 Research Papers</div>
+                    <div class="highlight">💻 6+ Projects</div>
+                    <div class="highlight">🏆 IoT & Security Focus</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section section-dark">
+    <section id="skills" class="section section-alt">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">My Toolkit</span>
-                <h2 class="section-title">Technologies I work with</h2>
-            </div>
+            <h2 class="section-title">🛠️ My Toolkit</h2>
             <div class="skills-grid">
-                <div class="skill-category">
-                    <div class="skill-icon">💻</div>
+                <div class="skill-card">
+                    <span class="skill-emoji">💻</span>
                     <h3>Programming</h3>
-                    <div class="skill-items">
-                        <span>C</span><span>C++</span><span>Python</span><span>Assembly</span><span>VHDL</span><span>Verilog</span>
+                    <div class="skill-tags">
+                        <span>C</span><span>C++</span><span>Python</span><span>VHDL</span><span>Verilog</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <div class="skill-icon">🔌</div>
+                <div class="skill-card">
+                    <span class="skill-emoji">🔌</span>
                     <h3>Hardware</h3>
-                    <div class="skill-items">
-                        <span>ARM Cortex</span><span>STM32</span><span>ESP32</span><span>Arduino</span><span>Raspberry Pi</span><span>Jetson</span>
+                    <div class="skill-tags">
+                        <span>ARM Cortex</span><span>STM32</span><span>ESP32</span><span>Arduino</span><span>Jetson</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <div class="skill-icon">📡</div>
+                <div class="skill-card">
+                    <span class="skill-emoji">📡</span>
                     <h3>Protocols</h3>
-                    <div class="skill-items">
-                        <span>CAN Bus</span><span>I2C</span><span>SPI</span><span>UART</span><span>MQTT</span><span>Bluetooth</span>
+                    <div class="skill-tags">
+                        <span>CAN Bus</span><span>I2C</span><span>SPI</span><span>UART</span><span>MQTT</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <div class="skill-icon">🛠️</div>
+                <div class="skill-card">
+                    <span class="skill-emoji">🛠️</span>
                     <h3>Tools</h3>
-                    <div class="skill-items">
-                        <span>FreeRTOS</span><span>Linux</span><span>Git</span><span>MATLAB</span><span>Keil</span><span>Eagle PCB</span>
+                    <div class="skill-tags">
+                        <span>FreeRTOS</span><span>Linux</span><span>Git</span><span>MATLAB</span><span>Keil</span>
                     </div>
                 </div>
             </div>
@@ -170,132 +140,63 @@
     <!-- Projects Section -->
     <section id="projects" class="section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Selected Works</span>
-                <h2 class="section-title">Projects I'm proud of</h2>
-            </div>
+            <h2 class="section-title">🚀 Projects</h2>
             <div class="projects-grid">
-                <a href="https://github.com/jonathansunil12345-lang/energy-coach" target="_blank" class="project-card featured">
-                    <div class="project-image">
-                        <div class="project-overlay"></div>
-                        <span class="project-number">01</span>
-                    </div>
-                    <div class="project-info">
-                        <h3>Energy Coach</h3>
-                        <p>Smart energy monitoring and optimization system with real-time analytics and AI-powered recommendations.</p>
-                        <div class="project-tags">
-                            <span>Python</span><span>IoT</span><span>Analytics</span>
-                        </div>
-                        <span class="project-link">View on GitHub →</span>
-                    </div>
+                <a href="https://github.com/jonathansunil12345-lang/energy-coach" target="_blank" class="project-card">
+                    <span class="project-emoji">⚡</span>
+                    <h3>Energy Coach</h3>
+                    <p>Smart energy monitoring with real-time analytics</p>
+                    <div class="project-tags"><span>Python</span><span>IoT</span></div>
                 </a>
                 <a href="https://github.com/jonathansunil12345-lang/jetson-air-sentinal" target="_blank" class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay"></div>
-                        <span class="project-number">02</span>
-                    </div>
-                    <div class="project-info">
-                        <h3>Jetson Air Sentinel</h3>
-                        <p>Air quality monitoring using NVIDIA Jetson for edge computing and real-time environmental analysis.</p>
-                        <div class="project-tags">
-                            <span>Jetson</span><span>Edge AI</span><span>Python</span>
-                        </div>
-                        <span class="project-link">View on GitHub →</span>
-                    </div>
+                    <span class="project-emoji">🌬️</span>
+                    <h3>Jetson Air Sentinel</h3>
+                    <p>Air quality monitoring with edge AI</p>
+                    <div class="project-tags"><span>Jetson</span><span>Edge AI</span></div>
                 </a>
                 <a href="https://github.com/jonathansunil12345-lang/wearable-gait" target="_blank" class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay"></div>
-                        <span class="project-number">03</span>
-                    </div>
-                    <div class="project-info">
-                        <h3>Wearable Gait Analysis</h3>
-                        <p>Wearable device for gait analysis and movement pattern recognition using advanced sensors and ML.</p>
-                        <div class="project-tags">
-                            <span>Sensors</span><span>ML</span><span>Wearables</span>
-                        </div>
-                        <span class="project-link">View on GitHub →</span>
-                    </div>
+                    <span class="project-emoji">🚶</span>
+                    <h3>Wearable Gait Analysis</h3>
+                    <p>Movement pattern recognition device</p>
+                    <div class="project-tags"><span>Sensors</span><span>ML</span></div>
                 </a>
                 <a href="https://github.com/jonathansunil12345-lang/can_cyber_sim" target="_blank" class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay"></div>
-                        <span class="project-number">04</span>
-                    </div>
-                    <div class="project-info">
-                        <h3>CAN Cyber Simulator</h3>
-                        <p>Cybersecurity simulation for automotive CAN bus networks to test attack and defense mechanisms.</p>
-                        <div class="project-tags">
-                            <span>CAN Bus</span><span>Security</span><span>Automotive</span>
-                        </div>
-                        <span class="project-link">View on GitHub →</span>
-                    </div>
+                    <span class="project-emoji">🚗</span>
+                    <h3>CAN Cyber Simulator</h3>
+                    <p>Automotive network security testing</p>
+                    <div class="project-tags"><span>CAN</span><span>Security</span></div>
                 </a>
                 <a href="https://github.com/jonathansunil12345-lang/project-samarth-events" target="_blank" class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay"></div>
-                        <span class="project-number">05</span>
-                    </div>
-                    <div class="project-info">
-                        <h3>Project Samarth Events</h3>
-                        <p>Event management and coordination system for academic and community events with real-time updates.</p>
-                        <div class="project-tags">
-                            <span>Python</span><span>Web</span><span>Database</span>
-                        </div>
-                        <span class="project-link">View on GitHub →</span>
-                    </div>
+                    <span class="project-emoji">📅</span>
+                    <h3>Samarth Events</h3>
+                    <p>Event management system</p>
+                    <div class="project-tags"><span>Python</span><span>Web</span></div>
                 </a>
                 <a href="https://github.com/jonathansunil12345-lang/capstone_code" target="_blank" class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay"></div>
-                        <span class="project-number">06</span>
-                    </div>
-                    <div class="project-info">
-                        <h3>Capstone Code</h3>
-                        <p>M.Tech capstone project - Embedded systems security research and implementation.</p>
-                        <div class="project-tags">
-                            <span>Embedded</span><span>Security</span><span>Research</span>
-                        </div>
-                        <span class="project-link">View on GitHub →</span>
-                    </div>
+                    <span class="project-emoji">🎓</span>
+                    <h3>Capstone Code</h3>
+                    <p>M.Tech security research project</p>
+                    <div class="project-tags"><span>Embedded</span><span>Security</span></div>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Publications Section -->
-    <section id="publications" class="section section-dark">
+    <section id="publications" class="section section-alt">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Research</span>
-                <h2 class="section-title">Publications & Papers</h2>
-            </div>
+            <h2 class="section-title">📚 Publications</h2>
             <div class="publications-grid">
-                <div class="publication-card">
-                    <div class="pub-badge published">Published</div>
-                    <div class="pub-content">
-                        <h3>IoT Wearable Device to Detect and Monitor Mental Health and Stress</h3>
-                        <div class="pub-venue">
-                            <strong>4th IEEE International Conference on Sensors and Related Networks (SENNET 2025)</strong>
-                            <span>VIT University, Vellore | July 24-27, 2025</span>
-                        </div>
-                        <p>Research on IoT-based wearable technology for real-time mental health monitoring and stress detection using physiological sensors.</p>
-                        <a href="https://vit.ac.in/SENNET-2025/" target="_blank" class="pub-link">
-                            View Conference
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                        </a>
-                    </div>
+                <div class="pub-card">
+                    <div class="pub-badge published">✅ Published</div>
+                    <h3>IoT Wearable Device to Detect and Monitor Mental Health and Stress</h3>
+                    <p class="pub-venue">📍 SENNET 2025 - VIT University, Vellore | July 2025</p>
+                    <a href="https://vit.ac.in/SENNET-2025/" target="_blank" class="pub-link">View Conference →</a>
                 </div>
-                <div class="publication-card">
-                    <div class="pub-badge accepted">Accepted</div>
-                    <div class="pub-content">
-                        <h3>IoT Wearable Technology for Assessing and Observing Mental Health and Stress Levels</h3>
-                        <div class="pub-venue">
-                            <strong>2nd International Conference on Electronic Circuits and Signaling Technologies (ICECST 2025)</strong>
-                            <span>Lincoln University College, Malaysia | October 23-25, 2025</span>
-                        </div>
-                        <p>Extended research on wearable IoT systems for continuous assessment and observation of mental health parameters and stress indicators.</p>
-                    </div>
+                <div class="pub-card">
+                    <div class="pub-badge accepted">📝 Accepted</div>
+                    <h3>IoT Wearable Technology for Assessing Mental Health and Stress Levels</h3>
+                    <p class="pub-venue">📍 ICECST 2025 - Lincoln University, Malaysia | Oct 2025</p>
                 </div>
             </div>
         </div>
@@ -304,72 +205,43 @@
     <!-- Education Section -->
     <section id="education" class="section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Education</span>
-                <h2 class="section-title">Academic Background</h2>
-            </div>
-            <div class="education-timeline">
-                <div class="edu-item">
-                    <div class="edu-year">2023 - 2025</div>
-                    <div class="edu-content">
-                        <h3>M.Tech in Embedded Systems</h3>
-                        <p>VIT University, Vellore</p>
-                        <span class="edu-focus">Specialization: Automotive Security & IoT</span>
-                    </div>
+            <h2 class="section-title">🎓 Education</h2>
+            <div class="edu-grid">
+                <div class="edu-card">
+                    <span class="edu-year">2023 - 2025</span>
+                    <h3>🎓 M.Tech in Embedded Systems</h3>
+                    <p>VIT University, Vellore</p>
                 </div>
-                <div class="edu-item">
-                    <div class="edu-year">2019 - 2023</div>
-                    <div class="edu-content">
-                        <h3>B.Tech in Electronics & Communication</h3>
-                        <p>Your Previous University</p>
-                        <span class="edu-focus">Foundation in Electronics Engineering</span>
-                    </div>
+                <div class="edu-card">
+                    <span class="edu-year">2019 - 2023</span>
+                    <h3>📘 B.Tech in Electronics</h3>
+                    <p>Your Previous University</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section section-dark">
+    <section id="contact" class="section section-alt">
         <div class="container">
+            <h2 class="section-title">📬 Get In Touch</h2>
             <div class="contact-content">
-                <div class="section-header">
-                    <span class="section-tag">Get In Touch</span>
-                    <h2 class="section-title">Let's work together</h2>
-                    <p class="contact-subtitle">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
-                </div>
+                <p>I'm always open to new opportunities and collaborations! 🤝</p>
                 <div class="contact-links">
-                    <a href="mailto:jonathan@email.com" class="contact-item">
-                        <span class="contact-icon">📧</span>
-                        <span>jonathan@email.com</span>
-                    </a>
-                    <a href="tel:+91XXXXXXXXXX" class="contact-item">
-                        <span class="contact-icon">📱</span>
-                        <span>+91 XXXXX XXXXX</span>
-                    </a>
-                    <span class="contact-item">
-                        <span class="contact-icon">📍</span>
-                        <span>Vellore, Tamil Nadu, India</span>
-                    </span>
+                    <a href="mailto:jonathan@email.com" class="contact-item">📧 jonathan@email.com</a>
+                    <a href="tel:+91XXXXXXXXXX" class="contact-item">📱 +91 XXXXX XXXXX</a>
+                    <span class="contact-item">📍 Vellore, Tamil Nadu, India</span>
                 </div>
                 <div class="social-links">
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        LinkedIn
-                    </a>
-                    <a href="https://github.com/jonathansunil12345-lang" target="_blank" class="social-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                        GitHub
-                    </a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-btn">💼 LinkedIn</a>
+                    <a href="https://github.com/jonathansunil12345-lang" target="_blank" class="social-btn">🐙 GitHub</a>
                 </div>
             </div>
         </div>
     </section>
 
     <footer class="footer">
-        <div class="container">
-            <p>Designed & Built by Jonathan | 2024</p>
-        </div>
+        <p>Made with ❤️ by Jonathan | 2024</p>
     </footer>
 
     <script src="script.js"></script>

@@ -1,3 +1,29 @@
+// Theme Toggle
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
+const themeIcon = themeToggle.querySelector('.theme-icon');
+
+// Check saved theme
+const savedTheme = localStorage.getItem('theme') || 'light';
+if (savedTheme === 'dark') {
+    body.classList.remove('light-mode');
+    body.classList.add('dark-mode');
+    themeIcon.textContent = '☀️';
+}
+
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    body.classList.toggle('light-mode');
+    
+    if (body.classList.contains('dark-mode')) {
+        themeIcon.textContent = '☀️';
+        localStorage.setItem('theme', 'dark');
+    } else {
+        themeIcon.textContent = '🌙';
+        localStorage.setItem('theme', 'light');
+    }
+});
+
 // Mobile Navigation
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
@@ -27,73 +53,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar scroll effect
-let lastScroll = 0;
-const navbar = document.querySelector('.navbar');
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 100) {
-        navbar.style.background = 'rgba(10, 10, 15, 0.95)';
-    } else {
-        navbar.style.background = 'rgba(10, 10, 15, 0.8)';
-    }
-    
-    lastScroll = currentScroll;
-});
-
-// Intersection Observer for animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animate-in');
-        }
-    });
-}, observerOptions);
-
-// Observe elements
-document.querySelectorAll('.section-header, .project-card, .skill-category, .stat-card, .publication-card, .edu-item').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
-});
-
-// Add animate-in class styles
-const style = document.createElement('style');
-style.textContent = `
-    .animate-in {
-        opacity: 1 !important;
-        transform: translateY(0) !important;
-    }
-`;
-document.head.appendChild(style);
-
-// Parallax effect for hero background
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const heroGradient = document.querySelector('.hero-bg-gradient');
-    if (heroGradient) {
-        heroGradient.style.transform = `translateY(${scrolled * 0.3}px)`;
-    }
-});
-
-// Tech tags hover effect
-document.querySelectorAll('.tech-tag').forEach(tag => {
-    tag.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-3px)';
-    });
-    tag.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0)';
-    });
-});
-
 // Active nav link highlight
 const sections = document.querySelectorAll('section[id]');
 
@@ -116,48 +75,47 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Typing effect for hero (optional enhancement)
-const heroTitle = document.querySelector('.hero-title');
-if (heroTitle) {
-    heroTitle.style.opacity = '1';
-}
-
-// Project cards stagger animation
-document.querySelectorAll('.project-card').forEach((card, index) => {
-    card.style.transitionDelay = `${index * 0.1}s`;
-});
-
-// Stats counter animation
-const animateCounter = (element, target) => {
-    let current = 0;
-    const increment = target / 30;
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-            element.textContent = target + '+';
-            clearInterval(timer);
-        } else {
-            element.textContent = Math.floor(current) + '+';
-        }
-    }, 50);
+// Intersection Observer for animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
 };
 
-// Initialize counters when visible
-const statsObserver = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            const number = entry.target.querySelector('.stat-number');
-            if (number && !number.classList.contains('animated')) {
-                const value = parseInt(number.textContent);
-                if (!isNaN(value)) {
-                    animateCounter(number, value);
-                    number.classList.add('animated');
-                }
-            }
+            entry.target.classList.add('animate-in');
         }
     });
-}, { threshold: 0.5 });
+}, observerOptions);
 
-document.querySelectorAll('.stat-card').forEach(card => {
-    statsObserver.observe(card);
+// Add animation styles
+const style = document.createElement('style');
+style.textContent = `
+    .skill-card, .project-card, .pub-card, .edu-card, .highlight {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .animate-in {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+`;
+document.head.appendChild(style);
+
+// Observe elements
+document.querySelectorAll('.skill-card, .project-card, .pub-card, .edu-card, .highlight').forEach((el, index) => {
+    el.style.transitionDelay = `${index * 0.05}s`;
+    observer.observe(el);
+});
+
+// Navbar background on scroll
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+    } else {
+        navbar.style.boxShadow = 'none';
+    }
 });
